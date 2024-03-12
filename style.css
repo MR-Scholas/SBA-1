@@ -1,0 +1,206 @@
+html
+{
+    height:100%;
+    width:100%;
+    margin:0;
+    padding:0;
+    font-family:'Comic Sans MS';
+}
+
+body
+{
+    background-color:aquamarine;
+}
+
+.navbar
+{
+    display:flex;
+    border:solid black 1px;
+    justify-content:space-around;
+    height:100px;
+    margin:50px;
+    border-radius:50px;
+    align-items:center;
+    background-color: black;
+    color:white;
+}
+
+.navLeft
+{
+    height:75%;
+    max-width:30%;
+}
+
+.navCenter
+{
+    height:100%;
+    max-width:30%;
+}
+
+.navRight
+{
+    height:75%;
+    max-width:30%;
+}
+
+.logo
+{
+    display:block;
+    /* box-shadow: 0px 0px 20px 30px rgba(0,0,0,1); */
+    height:100%;
+    width:100%;
+}
+
+.sandwich
+{
+    height:100%;
+    width:100%;
+    transition:.5s;
+}
+
+.sandwich:hover
+{
+    content:url(sandwich-a.webp);
+    box-shadow:0px 0px 10px 10px gold;
+    transition:.5s;
+}
+
+.shortcake
+{
+    height:100%;
+    width:100%;
+}
+
+.shortcake:hover
+{
+    content:url(shortcake-a.webp);
+    box-shadow:0px 0px 10px 10px gold;
+    transition:.5s;
+}
+
+.home
+{
+    height:100%;
+    width:100%;
+}
+
+.home:hover
+{
+    content:url(home-a.webp);
+    box-shadow:0px 0px 10px 10px gold;
+    transition:.5s;
+}
+
+.flexPage
+{
+    display:flex;
+    background-color:aquamarine;
+    width:100%;
+    justify-content:space-between;
+}
+
+.columnLeft
+{
+    width:33%;
+    border:solid black 1px;
+    background-color:salmon;
+    text-align:center;
+}
+
+table
+{
+    margin:auto;
+    border:1px solid black;
+}
+
+td 
+{
+    padding:10px;
+    text-align:left;
+}
+
+.food
+{
+    height:5vw;
+}
+
+#grubhub
+{
+    margin-left:-20%;
+}
+
+.columnCenter
+{
+    width:33%;
+    text-align:center;
+    border:solid black 1px;
+    background-color:lightsalmon;
+}
+
+.columnRight
+{
+    width:33%;
+    text-align:center;
+    border:solid black 1px;
+    background-color:bisque;
+    position:relative;
+}
+
+.sandwichvscake
+{
+    display:flex;
+    justify-content:space-between;
+    height:80%;
+    align-items: center;
+    animation-name:vs;
+    animation-duration:3s;
+    animation-iteration-count:infinite;
+    animation-direction:alternate;
+    background-image:url(vscollision.png); 
+    background-size:0%; 
+    background-repeat:no-repeat; 
+    background-position-x:45%; 
+    background-position-y:50%;
+}
+
+.sandwichvs
+{
+    height:25%;
+}
+
+.shortcakevs
+{
+    height:25%;
+}
+
+@keyframes vs 
+{
+    0% {margin-left:0px; margin-right:0px;}
+    50% {background-size:0%; background-position-x:50%; background-position-y:50%;}
+    90% {background-size:40%; background-repeat:no-repeat; background-position-x:45%; background-position-y:50%;}
+    100% {margin-left:25%; margin-right:25%; background-size:40%; background-repeat:no-repeat; background-position-x:45%; background-position-y:50%;}
+}
+
+.spinner, .winner
+{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    
+}
+
+.spinner
+{
+    height:50%;
+    animation-name:spin;
+    animation-duration:10s;
+    animation-iteration-count:infinite;
+    animation-timing-function:linear;
+}
+
+@keyframes spin 
+{
+    from{transform:translate(-50%, -50%) rotate(0deg);}
+    to{transform:translate(-50%, -50%) rotate(360deg);}
+}
